@@ -64,20 +64,20 @@ public class RegistrationImageController {
 
     @FXML
     private void onClickDefaultBtn() {
-        myPoint = new MyPoint("Точка 1", 55.715874, 49.189384,
-                190, 188);
+        myPoint = new MyPoint("Точка 1", 49.020150, 55.866845,
+                62, 115);
         MainPageController.myPoints.add(myPoint);
 
-        myPoint = new MyPoint("Точка 2", 55.848740, 49.189384,
-                471, 188);
+        myPoint = new MyPoint("Точка 2", 49.188837, 55.848350,
+                470, 188);
         MainPageController.myPoints.add(myPoint);
 
-        myPoint = new MyPoint("Точка 3", 55.848740, 49.151299,
-                471, 747);
+        myPoint = new MyPoint("Точка 3", 49.151581, 55.718731,
+                387, 748);
         MainPageController.myPoints.add(myPoint);
 
-        myPoint = new MyPoint("Точка 4", 55.715874, 49.151299,
-                190, 747);
+        myPoint = new MyPoint("Точка 4", 49.071148, 55.716143,
+                190, 762);
         MainPageController.myPoints.add(myPoint);
 
         pointsTableView.setItems(MainPageController.myPoints);
