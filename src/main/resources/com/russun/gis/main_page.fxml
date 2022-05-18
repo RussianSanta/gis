@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" prefHeight="554.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.russun.gis.MainPageController">
+    <MenuBar prefHeight="554.0" prefWidth="684.0" style="-fx-background-color: #faebc3;">
+        <Menu mnemonicParsing="false" text="Файл">
+            <MenuItem mnemonicParsing="false" onAction="#onClickMenuFileItemOpen" text="Открыть" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="Данные">
+            <MenuItem mnemonicParsing="false" onAction="#onClickMenuDataItemTable" text="Таблица" />
+            <MenuItem mnemonicParsing="false" onAction="#onClickMenuDataItemSql" text="SQL" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="Фигуры">
+            <MenuItem mnemonicParsing="false" onAction="#onClickLineBtn" text="Линия" />
+            <MenuItem mnemonicParsing="false" onAction="#onClickEllipseBtn" text="Эллипс" />
+            <MenuItem mnemonicParsing="false" onAction="#onClickRectangleBtn" text="Прямоугольник" />
+            <MenuItem mnemonicParsing="false" onAction="#onClickPolygonBtn" text="Полигон" />
+            <MenuItem mnemonicParsing="false" onAction="#onClickZonaBtn" text="Зона заражения" />
+         <MenuItem fx:id="showFiguresBtn" mnemonicParsing="false" onAction="#onClickShowFiguresBtn" text="Скрыть" />
+        </Menu>
+    </MenuBar>
+    <ScrollPane fx:id="scrollPane" layoutY="38.0" prefHeight="522.0" prefWidth="675.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+        <Group fx:id="mainGroup">
+            <VBox fx:id="helloText" layoutX="194.0" layoutY="211.0">
+                <children>
+                    <Label text="Для начала выберите изображение">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        <VBox.margin>
+                            <Insets left="5.0" right="5.0" />
+                        </VBox.margin>
+                    </Label>
+                    <Hyperlink onAction="#onClickMenuFileItemOpen" text="Выбрать">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        <VBox.margin>
+                            <Insets left="110.0" right="110.0" />
+                        </VBox.margin>
+                    </Hyperlink>
+                </children>
+            </VBox>
+            <ImageView fx:id="mapImageView" fitHeight="496.0" fitWidth="672.0" />
+        </Group>
+    </ScrollPane>
+    <HBox fx:id="imageContactButtonContainer" spacing="10.0" style="-fx-background-color: #20200050;" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+        <children>
+            <Button mnemonicParsing="false" onAction="#onClickZoomOutBtn" prefHeight="26.0" prefWidth="30" text="-" />
+            <Button mnemonicParsing="false" onAction="#onClickZoomInBtn" prefHeight="26.0" prefWidth="30" text="+" />
+            <Button mnemonicParsing="false" onAction="#onClickDefaultBtn" text="Сброс" />
+        </children>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </padding>
+    </HBox>
+</AnchorPane>
