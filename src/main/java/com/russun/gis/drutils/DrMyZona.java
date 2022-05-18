@@ -33,10 +33,7 @@ public class DrMyZona {
         myZona.getEllipse().setRadiusX(xradius);
         myZona.setXgeoRadius(xgeoRadius);
 
-        double ygeoSubtract = MainPageController.fromYkm(xgeoRadius);
-        xyrect = RectGeo.fromGeo(myZona.getXgeoCenter(), myZona.getYgeoCenter() - ygeoSubtract);
-        double yradius = Math.abs(RectGeo.fromRect(xyrect[1]) - myZona.getEllipse().getCenterY());
-        myZona.getEllipse().setRadiusY(yradius);
+        myZona.getEllipse().setRadiusY(xradius);
         myZona.setYgeoRadius(xgeoRadius);
 
         myZona.getEllipse().setStrokeWidth(MainPageController.factor);
