@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-
-<AnchorPane prefHeight="536.0" prefWidth="614.0" style="-fx-background-color: #faebc3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.russun.gis.RegistrationImageController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="536.0" prefWidth="614.0"
+            style="-fx-background-color: #faebc3;" xmlns="http://javafx.com/javafx/16"
+            fx:controller="com.russun.gis.RegistrationImageController">
     <children>
-        <Button layoutX="311.0" layoutY="434.0" mnemonicParsing="false" onAction="#onClickCancelBtn" prefWidth="70" text="Отмена" AnchorPane.bottomAnchor="17.4" AnchorPane.rightAnchor="232.99999999999997" />
-        <Button layoutX="233.0" layoutY="434.0" mnemonicParsing="false" onAction="#onClickOkBtn" prefWidth="70" text="ОК" AnchorPane.bottomAnchor="17.4" />
+        <Button layoutX="311.0" layoutY="434.0" mnemonicParsing="false" onAction="#onClickCancelBtn" prefWidth="70"
+                text="Отмена" AnchorPane.bottomAnchor="17.4" AnchorPane.rightAnchor="232.99999999999997"/>
+        <Button layoutX="233.0" layoutY="434.0" mnemonicParsing="false" onAction="#onClickOkBtn" prefWidth="70"
+                text="ОК" AnchorPane.bottomAnchor="17.4"/>
 
-        <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutY="132.0" prefHeight="287.0" prefWidth="614.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutY="132.0" prefHeight="287.0" prefWidth="614.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <Group fx:id="mainGroup">
-                <ImageView fx:id="scaleMapImageView" fitHeight="NaN" fitWidth="NaN" layoutX="64.0" layoutY="107.0" preserveRatio="true" />
+                <ImageView fx:id="scaleMapImageView" fitHeight="NaN" fitWidth="NaN" layoutX="64.0" layoutY="107.0"
+                           preserveRatio="true"/>
             </Group>
         </ScrollPane>
 
         <ScrollPane prefHeight="131.0" prefWidth="614.0">
             <TableView fx:id="pointsTableView" prefHeight="124.0" prefWidth="612.0">
                 <columnResizePolicy>
-                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
                 </columnResizePolicy>
             </TableView>
         </ScrollPane>
-        <HBox spacing="20.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="151.0">
+        <HBox spacing="20.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="151.0"
+              AnchorPane.rightAnchor="151.0">
             <children>
-                <Button mnemonicParsing="false" onAction="#onClickDefaultBtn" prefHeight="30.0" text="Базовое" />
-                <Button mnemonicParsing="false" onAction="#onClickDeleteBtn" prefHeight="30.0" text="Удалить  точку" />
-                <Button mnemonicParsing="false" onAction="#onClickZoomOutBtn" prefHeight="30" prefWidth="30" text="-" />
-                <Button mnemonicParsing="false" onAction="#onClickZoomInBtn" prefHeight="30" prefWidth="30" text="+" />
+                <Button mnemonicParsing="false" onAction="#onClickDefaultBtn" prefHeight="30.0" text="Базовое"/>
+                <Button mnemonicParsing="false" onAction="#onClickDeleteBtn" prefHeight="30.0" text="Удалить  точку"/>
+                <Button mnemonicParsing="false" onAction="#onClickZoomOutBtn" prefHeight="30" prefWidth="30" text="-"/>
+                <Button mnemonicParsing="false" onAction="#onClickZoomInBtn" prefHeight="30" prefWidth="30" text="+"/>
             </children>
         </HBox>
     </children>

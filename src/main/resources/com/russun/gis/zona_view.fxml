@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<AnchorPane prefHeight="405.0" prefWidth="600.0" style="-fx-background-color: #faebc3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.russun.gis.ZonaController">
-    <Label layoutX="51.0" layoutY="33.0" text="Время, прошедшее после разрушения объекта, ч" />
-    <Label layoutX="51.0" layoutY="60.0" text="Температура воздуха, ℃" />
-    <TextField fx:id="timeTextField" layoutX="375.0" layoutY="29.0" />
-    <TextField fx:id="tempTextField" layoutX="375.0" layoutY="65.0" />
-    <Label layoutX="177.0" layoutY="125.0" text="Укажите запасы ядовитых веществ, в тоннах" />
-    <CheckBox fx:id="chlorCheckBox" layoutX="53.0" layoutY="182.0" mnemonicParsing="false" text="Хлор" />
-    <CheckBox fx:id="ammiakCheckBox" layoutX="53.0" layoutY="231.0" mnemonicParsing="false" text="Аммиак" />
-    <CheckBox fx:id="nitrilCheckBox" layoutX="53.0" layoutY="285.0" mnemonicParsing="false" text="Нитрил акриловой кислоты" />
-    <TextField fx:id="chlorTextField" layoutX="375.0" layoutY="178.0" />
-    <TextField fx:id="ammiakTextField" layoutX="375.0" layoutY="227.0" />
-    <TextField fx:id="nitrilTextField" layoutX="375.0" layoutY="281.0" />
-    <Button layoutX="207.0" layoutY="348.0" mnemonicParsing="false" onAction="#onClickOkBtn" prefWidth="80" text="ОК" />
-    <Button layoutX="313.0" layoutY="348.0" mnemonicParsing="false" onAction="#onClickCancelBtn" prefWidth="80" text="Отмена" />
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="405.0" prefWidth="600.0"
+            style="-fx-background-color: #faebc3;" xmlns="http://javafx.com/javafx/16"
+            fx:controller="com.russun.gis.ZonaController">
+    <Label layoutX="51.0" layoutY="33.0" text="Время, прошедшее после разрушения объекта, ч"/>
+    <Label layoutX="51.0" layoutY="60.0" text="Температура воздуха, ℃"/>
+    <TextField fx:id="timeTextField" layoutX="375.0" layoutY="29.0"/>
+    <TextField fx:id="tempTextField" layoutX="375.0" layoutY="65.0"/>
+    <Label layoutX="177.0" layoutY="125.0" text="Укажите запасы ядовитых веществ, в тоннах"/>
+    <CheckBox fx:id="chlorCheckBox" layoutX="53.0" layoutY="182.0" mnemonicParsing="false" text="Хлор"/>
+    <CheckBox fx:id="ammiakCheckBox" layoutX="53.0" layoutY="231.0" mnemonicParsing="false" text="Аммиак"/>
+    <CheckBox fx:id="nitrilCheckBox" layoutX="53.0" layoutY="285.0" mnemonicParsing="false"
+              text="Нитрил акриловой кислоты"/>
+    <TextField fx:id="chlorTextField" layoutX="375.0" layoutY="178.0"/>
+    <TextField fx:id="ammiakTextField" layoutX="375.0" layoutY="227.0"/>
+    <TextField fx:id="nitrilTextField" layoutX="375.0" layoutY="281.0"/>
+    <Button layoutX="207.0" layoutY="348.0" mnemonicParsing="false" onAction="#onClickOkBtn" prefWidth="80" text="ОК"/>
+    <Button layoutX="313.0" layoutY="348.0" mnemonicParsing="false" onAction="#onClickCancelBtn" prefWidth="80"
+            text="Отмена"/>
 </AnchorPane>

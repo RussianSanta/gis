@@ -1,10 +1,8 @@
 package com.russun.gis;
 
 import com.russun.gis.drutils.*;
-import com.russun.gis.shapes.MyLine;
 import com.russun.gis.utils.DatabaseHandler;
 import com.russun.gis.utils.MyPoint;
-import com.russun.gis.utils.MyShape;
 import com.russun.gis.utils.RectGeo;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;

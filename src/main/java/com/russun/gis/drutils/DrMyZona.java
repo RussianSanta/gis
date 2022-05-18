@@ -39,7 +39,7 @@ public class DrMyZona {
         myZona.getEllipse().setStrokeWidth(MainPageController.factor);
         myZona.getEllipse().setStroke(Color.RED);
         myZona.getEllipse().setFill(Color.ROSYBROWN);
-        myZona.setGeoSquare(xgeoRadius*xgeoRadius*Math.PI);
+        myZona.setGeoSquare(xgeoRadius * xgeoRadius * Math.PI);
         MyZone.getMyZones().add(myZona);
         MainPageController.group.getChildren().add(myZona.getEllipse());
         countPointsZona = 0;

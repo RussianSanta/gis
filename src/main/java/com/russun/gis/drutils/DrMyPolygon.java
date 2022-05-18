@@ -15,9 +15,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class DrMyPolygon {
+    private static final ArrayList<MyPolygon> myPolygons = MyPolygon.getMyPolygons();
     public static int countPointsPolygon;
     public static MyPolygon myPolygon;
-    private static final ArrayList<MyPolygon> myPolygons = MyPolygon.getMyPolygons();
     private static MyLine myLine;
 
     public static void drawLineForPolygon(double x, double y) {

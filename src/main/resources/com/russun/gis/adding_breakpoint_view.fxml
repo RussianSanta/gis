@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<AnchorPane prefHeight="400.0" prefWidth="339.0" style="-fx-background-color: #faebc3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.russun.gis.AddingBreakpointController">
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="339.0"
+            style="-fx-background-color: #faebc3;" xmlns="http://javafx.com/javafx/16"
+            fx:controller="com.russun.gis.AddingBreakpointController">
     <children>
-        <Button layoutX="60.0" layoutY="329.0" mnemonicParsing="false" onAction="#onClickOkBtn" prefWidth="80" text="ОК" />
-        <Button layoutX="155.0" layoutY="329.0" mnemonicParsing="false" onAction="#onClickCancelBtn" prefWidth="80" text="Отмена" />
-        <Label layoutX="60.0" layoutY="60.0" text="Название" />
-        <Label layoutX="60.0" layoutY="111.0" text="X на карте" />
-        <Label layoutX="60.0" layoutY="162.0" text="Y на карте" />
-        <Label layoutX="60.0" layoutY="212.0" text="X на рисунке" />
-        <Label layoutX="60.0" layoutY="263.0" text="Y на рисунке" />
-        <TextField fx:id="nameTextField" layoutX="137.0" layoutY="56.0" prefHeight="26.0" prefWidth="98.0" />
-        <TextField layoutX="137.0" layoutY="107.0" prefHeight="26.0" prefWidth="98.0" fx:id="xgeoTextField" />
-        <TextField fx:id="ygeoTextField" layoutX="137.0" layoutY="158.0" prefHeight="26.0" prefWidth="98.0" />
-        <TextField editable="false" layoutX="137.0" layoutY="208.0" prefHeight="26.0" prefWidth="98.0" fx:id="xrectTextField" />
-        <TextField fx:id="yrectTextField" editable="false" layoutX="137.0" layoutY="259.0" prefHeight="26.0" prefWidth="98.0" />
+        <Button layoutX="60.0" layoutY="329.0" mnemonicParsing="false" onAction="#onClickOkBtn" prefWidth="80"
+                text="ОК"/>
+        <Button layoutX="155.0" layoutY="329.0" mnemonicParsing="false" onAction="#onClickCancelBtn" prefWidth="80"
+                text="Отмена"/>
+        <Label layoutX="60.0" layoutY="60.0" text="Название"/>
+        <Label layoutX="60.0" layoutY="111.0" text="X на карте"/>
+        <Label layoutX="60.0" layoutY="162.0" text="Y на карте"/>
+        <Label layoutX="60.0" layoutY="212.0" text="X на рисунке"/>
+        <Label layoutX="60.0" layoutY="263.0" text="Y на рисунке"/>
+        <TextField fx:id="nameTextField" layoutX="137.0" layoutY="56.0" prefHeight="26.0" prefWidth="98.0"/>
+        <TextField layoutX="137.0" layoutY="107.0" prefHeight="26.0" prefWidth="98.0" fx:id="xgeoTextField"/>
+        <TextField fx:id="ygeoTextField" layoutX="137.0" layoutY="158.0" prefHeight="26.0" prefWidth="98.0"/>
+        <TextField editable="false" layoutX="137.0" layoutY="208.0" prefHeight="26.0" prefWidth="98.0"
+                   fx:id="xrectTextField"/>
+        <TextField fx:id="yrectTextField" editable="false" layoutX="137.0" layoutY="259.0" prefHeight="26.0"
+                   prefWidth="98.0"/>
     </children>
 </AnchorPane>
