@@ -73,8 +73,7 @@ public class ZonaController {
             double Gp = calcGp(N);
             if (Gp < G)
                 G = Gp;
-            double Sf = calcSf(G, N);
-            DrMyZona.drawZona(G, Sf);
+            DrMyZona.drawZona(G);
             zonaStage.close();
         }
     }
@@ -150,11 +149,6 @@ public class ZonaController {
     private double calcGp(double N) {
         double Gp = N * Substance.v;
         return Gp;
-    }
-
-    private double calcSf(double G, double N) {
-        double Sf = Substance.K8 * Math.pow(G, 2) * Math.pow(N, 0.2);
-        return Sf;
     }
 
 }

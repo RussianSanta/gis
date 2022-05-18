@@ -72,12 +72,12 @@ public class RegistrationImageController {
                 471, 188);
         MainPageController.myPoints.add(myPoint);
 
-        myPoint = new MyPoint("Точка 3", 55.718960, 49.151299,
-                388, 747);
+        myPoint = new MyPoint("Точка 3", 55.848740, 49.151299,
+                471, 747);
         MainPageController.myPoints.add(myPoint);
 
-        myPoint = new MyPoint("Точка 4", 55.715874, 49.071148,
-                190, 762);
+        myPoint = new MyPoint("Точка 4", 55.715874, 49.151299,
+                190, 747);
         MainPageController.myPoints.add(myPoint);
 
         pointsTableView.setItems(MainPageController.myPoints);

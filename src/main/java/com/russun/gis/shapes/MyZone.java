@@ -31,7 +31,8 @@ public class MyZone {
                 alert.setTitle("ГИС");
                 alert.setHeaderText("Информация о зоне заражения в географической системе координат");
                 alert.setContentText("Центральный x = " + xgeoCenter + "; Центральный y = " + ygeoCenter
-                        + "\nГлубина зоны заражения = " + xgeoRadius + " км");
+                        + "\nГлубина зоны заражения = " + xgeoRadius + " км"
+                        + "\nПлощадь зоны заражения = " + geoSquare + " км");
                 ButtonType ok = new ButtonType("ОК");
                 ButtonType delete = new ButtonType("Удалить");
                 alert.getButtonTypes().clear();

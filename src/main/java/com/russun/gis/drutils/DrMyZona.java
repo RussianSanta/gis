@@ -16,12 +16,9 @@ import java.util.ArrayList;
 public class DrMyZona {
     public static int countPointsZona;
 
-    private static MyZone myZona;
-
-    public static void drawZona(double xgeoRadius, double geoSquare) {
+    public static void drawZona(double xgeoRadius) {
         System.out.println(xgeoRadius);
-        myZona = new MyZone(new Ellipse());
-        double ygeoRadius = geoSquare / Math.PI / xgeoRadius;
+        MyZone myZona = new MyZone(new Ellipse());
 
         myZona.getEllipse().setCenterX(ZonaController.xcenter);
         myZona.getEllipse().setCenterY(ZonaController.ycenter);
@@ -36,20 +33,21 @@ public class DrMyZona {
         myZona.getEllipse().setRadiusX(xradius);
         myZona.setXgeoRadius(xgeoRadius);
 
-        double ygeoSubtract = MainPageController.fromYkm(ygeoRadius);
+        double ygeoSubtract = MainPageController.fromYkm(xgeoRadius);
         xyrect = RectGeo.fromGeo(myZona.getXgeoCenter(), myZona.getYgeoCenter() - ygeoSubtract);
         double yradius = Math.abs(RectGeo.fromRect(xyrect[1]) - myZona.getEllipse().getCenterY());
         myZona.getEllipse().setRadiusY(yradius);
-        myZona.setYgeoRadius(ygeoRadius);
+        myZona.setYgeoRadius(xgeoRadius);
 
         myZona.getEllipse().setStrokeWidth(MainPageController.factor);
         myZona.getEllipse().setStroke(Color.RED);
         myZona.getEllipse().setFill(Color.ROSYBROWN);
-        myZona.setGeoSquare(geoSquare);
+        myZona.setGeoSquare(xgeoRadius*xgeoRadius*Math.PI);
         MyZone.getMyZones().add(myZona);
         MainPageController.group.getChildren().add(myZona.getEllipse());
         countPointsZona = 0;
         System.out.println(myZona.getEllipse().getRadiusX());
+        System.out.println(myZona.getEllipse().getRadiusY());
 
         TableController.myShape = new MyShape(0, "Зона", 0.0, myZona.getGeoSquare(), 0.0);
         try {
