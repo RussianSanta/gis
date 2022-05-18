@@ -1,9 +1,9 @@
-package com.russun.gis.toxic;
+package com.russun.gis.poisions;
 
-public class Chlor implements Substance {
-    private final double K2 = 0.052;
-    private final double K3 = 1;
-    private final double d = 1.553;
+public class Ammiak implements Substance {
+    private final double K2 = 0.025;
+    private final double K3 = 0.04;
+    private final double d = 0.681;
 
     private double N;
     private double T;

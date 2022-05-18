@@ -1,4 +1,4 @@
-package com.russun.gis.drutils;
+package com.russun.gis.drawers;
 
 import com.russun.gis.MainPageController;
 import com.russun.gis.TableController;
@@ -41,28 +41,12 @@ public class DrMyLine {
                 double[] xygeo = RectGeo.toGeo(myLine.getX2rect(), myLine.getY2rect());
                 myLine.setX2geo(xygeo[0]);
                 myLine.setY2geo(xygeo[1]);
-                myLine.setLength
-                        (
-                                Math.sqrt
-                                        (
-                                                Math.pow(MainPageController.toXkm(myLine.getX1geo(), myLine.getX2geo()), 2)
-                                                        +
-                                                        Math.pow(MainPageController.toYkm(myLine.getY1geo(), myLine.getY2geo()), 2)
-                                        )
-                        );
+                myLine.setLength(Math.sqrt(Math.pow(MainPageController.toXkm(myLine.getX1geo(), myLine.getX2geo()), 2) + Math.pow(MainPageController.toYkm(myLine.getY1geo(), myLine.getY2geo()), 2)));
             } else {
-                myLine.setLength
-                        (
-                                Math.sqrt
-                                        (
-                                                Math.pow(Math.abs(myLine.getX2rect() - myLine.getX1rect()), 2)
-                                                        +
-                                                        Math.pow(Math.abs(myLine.getY2rect() - myLine.getY1rect()), 2)
-                                        )
-                        );
+                myLine.setLength(Math.sqrt(Math.pow(Math.abs(myLine.getX2rect() - myLine.getX1rect()), 2) + Math.pow(Math.abs(myLine.getY2rect() - myLine.getY1rect()), 2)));
             }
             myLine.getLine().setStrokeWidth(MainPageController.factor);
-            myLine.getLine().setStroke(Color.ORANGE);
+            myLine.getLine().setStroke(Color.BLACK);
             myLines.add(myLine);
             MainPageController.group.getChildren().add(myLine.getLine());
             countPointsLine = 0;

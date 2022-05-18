@@ -1,4 +1,4 @@
-package com.russun.gis.drutils;
+package com.russun.gis.drawers;
 
 import com.russun.gis.MainPageController;
 import com.russun.gis.TableController;
@@ -50,8 +50,8 @@ public class DrMyRectangle {
                 myRectangle.setPerimeter(myRectangle.getRectWidth() * 2 + myRectangle.getRectHeight() * 2);
             }
             myRectangle.getRectangle().setStrokeWidth(MainPageController.factor);
-            myRectangle.getRectangle().setStroke(Color.RED);
-            myRectangle.getRectangle().setFill(Color.YELLOW);
+            myRectangle.getRectangle().setStroke(Color.DARKGREEN);
+            myRectangle.getRectangle().setFill(Color.GREEN);
             myRectangles.add(myRectangle);
             MainPageController.group.getChildren().add(myRectangle.getRectangle());
             countPointsRectangle = 0;

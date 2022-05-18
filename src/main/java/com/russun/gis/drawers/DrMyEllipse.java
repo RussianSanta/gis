@@ -1,4 +1,4 @@
-package com.russun.gis.drutils;
+package com.russun.gis.drawers;
 
 import com.russun.gis.MainPageController;
 import com.russun.gis.TableController;
@@ -47,7 +47,7 @@ public class DrMyEllipse {
             myEllipse.setYrectRadius(RectGeo.toRect(yradius));
             myEllipse.getEllipse().setStrokeWidth(MainPageController.factor);
             myEllipse.getEllipse().setStroke(Color.BLUE);
-            myEllipse.getEllipse().setFill(Color.GREEN);
+            myEllipse.getEllipse().setFill(Color.ALICEBLUE);
             if (myEllipse.isGeo()) {
                 double[] xygeo = RectGeo.toGeo(RectGeo.toRect(x), RectGeo.toRect(y));
                 myEllipse.setYgeoRadius(MainPageController.toYkm(myEllipse.getYgeoCenter(), xygeo[1]));

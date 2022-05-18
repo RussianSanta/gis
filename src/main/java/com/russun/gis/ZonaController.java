@@ -1,10 +1,10 @@
 package com.russun.gis;
 
-import com.russun.gis.drutils.DrMyZona;
-import com.russun.gis.toxic.Ammiak;
-import com.russun.gis.toxic.Chlor;
-import com.russun.gis.toxic.Nitril;
-import com.russun.gis.toxic.Substance;
+import com.russun.gis.drawers.DrMyZona;
+import com.russun.gis.poisions.Ammiak;
+import com.russun.gis.poisions.Chlor;
+import com.russun.gis.poisions.Nitril;
+import com.russun.gis.poisions.Substance;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;

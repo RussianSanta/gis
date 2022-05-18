@@ -1,4 +1,4 @@
-package com.russun.gis.drutils;
+package com.russun.gis.drawers;
 
 import com.russun.gis.MainPageController;
 import com.russun.gis.TableController;

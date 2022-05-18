@@ -1,4 +1,4 @@
-package com.russun.gis.drutils;
+package com.russun.gis.drawers;
 
 import com.russun.gis.MainPageController;
 import com.russun.gis.TableController;
@@ -47,29 +47,13 @@ public class DrMyPolygon {
                 double[] xygeo = RectGeo.toGeo(myLine.getX2rect(), myLine.getY2rect());
                 myLine.setX2geo(xygeo[0]);
                 myLine.setY2geo(xygeo[1]);
-                myLine.setLength
-                        (
-                                Math.sqrt
-                                        (
-                                                Math.pow(MainPageController.toXkm(myLine.getX1geo(), myLine.getX2geo()), 2)
-                                                        +
-                                                        Math.pow(MainPageController.toYkm(myLine.getY1geo(), myLine.getY2geo()), 2)
-                                        )
-                        );
+                myLine.setLength(Math.sqrt(Math.pow(MainPageController.toXkm(myLine.getX1geo(), myLine.getX2geo()), 2) + Math.pow(MainPageController.toYkm(myLine.getY1geo(), myLine.getY2geo()), 2)));
             } else {
-                myLine.setLength
-                        (
-                                Math.sqrt
-                                        (
-                                                Math.pow(Math.abs(myLine.getX2rect() - myLine.getX1rect()), 2)
-                                                        +
-                                                        Math.pow(Math.abs(myLine.getY2rect() - myLine.getY1rect()), 2)
-                                        )
-                        );
+                myLine.setLength(Math.sqrt(Math.pow(Math.abs(myLine.getX2rect() - myLine.getX1rect()), 2) + Math.pow(Math.abs(myLine.getY2rect() - myLine.getY1rect()), 2)));
             }
             myPolygon.setPerimeter(myPolygon.getPerimeter() + myLine.getLength());
             myLine.getLine().setStrokeWidth(MainPageController.factor);
-            myLine.getLine().setStroke(Color.BLUE);
+            myLine.getLine().setStroke(Color.ORANGE);
             myPolygon.getMyLines().add(myLine);
             MainPageController.group.getChildren().add(myLine.getLine());
             countPointsPolygon = 0;
@@ -82,8 +66,8 @@ public class DrMyPolygon {
             myPolygon.getPolygon().getPoints().add(myPolygon.getMyLines().get(i).getLine().getStartY());
         }
         myPolygon.getPolygon().setStrokeWidth(MainPageController.factor);
-        myPolygon.getPolygon().setStroke(Color.BLUE);
-        myPolygon.getPolygon().setFill(Color.OLIVE);
+        myPolygon.getPolygon().setStroke(Color.ORANGE);
+        myPolygon.getPolygon().setFill(Color.YELLOW);
         myPolygons.add(myPolygon);
         for (int i = 0; i < myPolygon.getMyLines().size(); i++)
             MainPageController.group.getChildren().remove(myPolygon.getMyLines().get(i).getLine());
@@ -104,8 +88,7 @@ public class DrMyPolygon {
             }
             for (int i = 0; i < myPolygons.size(); i++) {
                 for (int j = 0; j < myPolygons.get(i).getPolygon().getPoints().size(); j++) {
-                    myPolygons.get(i).getPolygon().getPoints().set(j,
-                            RectGeo.toRectForRedraw(myPolygons.get(i).getPolygon().getPoints().get(j), zoom));
+                    myPolygons.get(i).getPolygon().getPoints().set(j, RectGeo.toRectForRedraw(myPolygons.get(i).getPolygon().getPoints().get(j), zoom));
                 }
                 myPolygons.get(i).getPolygon().setStrokeWidth(MainPageController.factor);
                 MainPageController.group.getChildren().add(myPolygons.get(i).getPolygon());

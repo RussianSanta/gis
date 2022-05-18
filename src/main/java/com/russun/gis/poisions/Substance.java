@@ -1,4 +1,4 @@
-package com.russun.gis.toxic;
+package com.russun.gis.poisions;
 
 public interface Substance {
     double K4 = 1;

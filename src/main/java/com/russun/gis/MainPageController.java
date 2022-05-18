@@ -1,6 +1,6 @@
 package com.russun.gis;
 
-import com.russun.gis.drutils.*;
+import com.russun.gis.drawers.*;
 import com.russun.gis.utils.DatabaseHandler;
 import com.russun.gis.utils.MyPoint;
 import com.russun.gis.utils.RectGeo;
@@ -109,6 +109,7 @@ public class MainPageController {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("ГИС");
             alert.setHeaderText("Зарегистрировать изображение?");
+            alert.setContentText("Необходимо для работы с географическими координатами");
             ButtonType yes = new ButtonType("Да");
             ButtonType no = new ButtonType("Нет");
             alert.getButtonTypes().clear();
@@ -150,7 +151,7 @@ public class MainPageController {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sql_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
-        stage.setTitle("SQL");
+        stage.setTitle("Пользовательский SQL запрос");
         stage.setScene(scene);
 
         SqlController.sqlStage = stage;
@@ -258,7 +259,7 @@ public class MainPageController {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("zona_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
-        stage.setTitle("Создание зоны заражения");
+        stage.setTitle("Зона заражения");
         stage.setScene(scene);
 
         ZonaController.zonaStage = stage;
